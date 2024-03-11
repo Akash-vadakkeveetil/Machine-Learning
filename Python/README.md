@@ -1,10 +1,38 @@
+	PYTHON IS A HIGH LEVEL INTREPRETED PROGRAMMING LANGUAGE,THAT IS OBJECT-ORIENTED AND USES DYNAMIC SEMANTICS
 
+-  High level - it is a programming language with a strong abstraction , that is we don't have to worry about the memory to store the data and all that like the real memory of computer and all , python take cares of it all . It is entirely different from the assembly programming language .
+- Interpreted - It mainly specifies how the program is run . For example when we take c programming language we have to compile it then it creates a .out file and then again we have to run this a.out file to execute the program . While in python we don't have to do much we just have to run the original file and the output will be displayed . 
+- object-oriented - everything is structured in the form of objects .
+- Dynamic - meaning that variable types are determined at runtime rather than during compilation , for example i don't have to specify datatype for a variable
 
 > This repo consists of all the important and basic topics of python to get started with python
 
+
+#### Some terms to remember 
+
+- Identifiers - names referring to keywords , variables etc
+- Key words - words whose functions are already decided , eg: true , false 
+```PYTHON
+# To see list of keywords
+import keywords
+keyword.kwlist
+```
+- 
+```
 ```PYTHON
 print("Hello world")
 
+```
+To print a variable along with text
+```PYTHON
+a = 10 
+print("The number is ",a)
+print(f"The number is {a}") #alternate method same result 
+
+
+#OUTPUT
+#The number is 10 
+#The number is 10
 ```
 This is the basic print function
 - #- for single line comment
@@ -144,7 +172,38 @@ print(len(list_name))# number of elements
 print(list_name[3])# prints apple
 list[1] = "orange"# updates the value of postion 1 in list
 ```
+```PYTHON
+# if l is a list then 
+l = ["hello","hi","welcome"]
+# to append a new word
+l.append("WORLD")
 
+
+# l1 and l2 are two list and to concatinate them to result
+result = l1 + l2
+```
+
+```PYTHON
+
+#these are the two lists and we need to write a fucntion which concatinates them and then return a list in which the smaller list is concatinated first
+
+concatenate_shortest_first(
+    [9, 9, 9, 9],
+    [2, 3]
+)
+
+def concatenate_shortest_first(l1, l2):
+    if len(l1) <= len(l2):
+        shortest = l1
+        longest = l2
+    else:
+        shortest = l2
+        longest = l1
+
+    return shortest + longest
+
+#output = [2, 3, 9, 9, 9, 9]
+```
 ## Tuple
 
 - value cannot be updated
